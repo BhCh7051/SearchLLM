@@ -1,6 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
-const API_BASE_URL =  process.env.REACT_APP_API_URL ; // Adjust with your backend's URL
+const API_BASE_URL =  "https://searchllm.onrender.com" ; // Adjust with your backend's URL
+console.log('API_BASE_URL:', API_BASE_URL); // Log the API base URL
 
 const postData = async (message) => {
     // Send a POST request to the API endpoint
