@@ -23,7 +23,7 @@ services:
     ports:
       - "3000:80"  # Expose port 80 in the container on 3000 for the host
     environment:
-      REACT_APP_API_URL: "http://api:3005" # Point to the internal Docker network API endpoint
+      REACT_APP_API_URL: ${REACT_APP_API_URL} # Point to the internal Docker network API endpoint
     networks:
       - searchllm-network
 

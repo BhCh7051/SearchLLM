@@ -1,7 +1,6 @@
 // src/services/api.js
 import axios from 'axios';
-// REACT_APP_API_URL
-const API_BASE_URL =  process.env.REACT_APP_API_URL || 'http://localhost:3005'; // Adjust with your backend's URL
+const API_BASE_URL =  process.env.REACT_APP_API_URL ; // Adjust with your backend's URL
 
 const postData = async (message) => {
     // Send a POST request to the API endpoint
