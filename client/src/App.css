@@ -1,0 +1,92 @@
+/* App.css */
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .app-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .search-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .search-box-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-display {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .result-display h3 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .result-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .source-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .source-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .source-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .source-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .follow-up-questions {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #e9ecef;
+    border-radius: 8px;
+  }
+  
+  .follow-up-questions h5 {
+    margin-bottom: 1rem;
+  }
+  
+  .follow-up-question {
+    margin-bottom: 0.5rem;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  

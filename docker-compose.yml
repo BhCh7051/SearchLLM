@@ -1,0 +1,33 @@
+services:
+  api:
+    build:
+      context: ./API
+      dockerfile: Dockerfile
+    container_name: searchllm_api
+    ports:
+      - "3005:3005"
+    environment:
+      # OPENAI_API_KEY: ${OPENAI_API_KEY}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      SERPER_SEARCH_API_KEY: ${SERPER_SEARCH_API_KEY}
+      # TOGETHER_AI_API_KEY: ${TOGETHER_AI_API_KEY}
+      HUGGINGFACEHUB_API_KEY: ${HUGGINGFACEHUB_API_KEY}
+    networks:
+      - searchllm-network
+
+  client:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    container_name: searchllm_client
+    ports:
+      - "3000:80"  # Expose port 80 in the container on 3000 for the host
+    environment:
+      REACT_APP_API_URL: "http://api:3005" # Point to the internal Docker network API endpoint
+    networks:
+      - searchllm-network
+
+# Define a shared network for inter-service communication
+networks:
+  searchllm-network:
+    driver: bridge
