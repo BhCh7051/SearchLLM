@@ -21,7 +21,7 @@ graph TD
     A[User Query] --> B[API Service]
     B --> C{Query Processing}
     C --> D[Query Rephrasing]
-    C --> E[Google Search API/Serper]
+    D --> E[Google Search API/Serper]
     
     E --> F[Web Content Fetching]
     F --> G[Content Processing]
@@ -34,11 +34,11 @@ graph TD
     
     M[HuggingFace Embeddings] --> I
     
-    K --> N[Answer Generation]
-    L --> N
+    L --> N[Answer Generation]
+    N --> Q
     
-    N --> O[Follow-up Questions]
-    N --> P[Source Citations]
+    K --> O[Follow-up Questions]
+    L --> P[Source Citations]
     
     O --> Q[Final Response]
     P --> Q
@@ -96,7 +96,6 @@ graph TD
   - Llama3
 - 📚 Source tracking and citation
 - 🧬 HuggingFace Inference Embeddings for semantic search
-- ⚡ Streaming responses for faster user feedback
 - 🔄 Dynamic follow-up question generation
 - 🐳 Dockerized deployment
 - 🔒 Secure API key management
